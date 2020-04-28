@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 120,
+            "database": "chat_app",
+            "dialect": "MariaDB",
+            "name": "local",
+            "password": "mariadb123",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}
