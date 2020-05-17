@@ -7,7 +7,7 @@ use diesel::QueryResult;
 
 #[get("/<user_id>")]
 pub fn get_messages(user_id: i32, conn: DbConn) -> QueryResult<Json<Vec<TextMessage>>> {
-    repo::list_for_user(user_id, &conn)
+    repo::list_to_user(user_id, &conn)
         .map(|messages| Json(messages))
 }
 

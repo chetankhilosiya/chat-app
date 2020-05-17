@@ -6,6 +6,10 @@ pub fn list_for_user(user_id: i32, db: &MysqlConnection) -> QueryResult<Vec<Text
     messages.filter(from_user.eq(user_id)).get_results::<TextMessage>(db)
 }
 
+pub fn list_to_user(user_id: i32, db: &MysqlConnection) -> QueryResult<Vec<TextMessage>> {
+    messages.filter(to_user.eq(user_id)).get_results::<TextMessage>(db)
+}
+
 // pub fn get(message_id: i32, db: &MysqlConnection) -> QueryResult<TextMessage> {
 //     messages::table.find(message_id).get_result::<TextMessage>(db)
 // }
